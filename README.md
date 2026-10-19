@@ -37,11 +37,88 @@
 
 ### 🚀 Proyectos Destacados
 
-* 🏎️ **[F1 Comparator](https://github.com/MartinMF24/F1-Comparator)** *(2026)*: Proyecto de análisis de datos, minería y *clustering* desarrollado durante 6 meses con **Python y Pandas** para predecir el rendimiento de pilotos de Fórmula 1 utilizando datasets históricos.
-* 🎟️ **[Microservice Ticketing GP](https://github.com/MartinMF24/microservice_ticketing_gp)** *(2026)*: Arquitectura de microservicios conectada a **Supabase** e integrada con un sistema legacy **SOAP** para la gestión de entradas de Fórmula 1, automatizada mediante *cron jobs*.
-* 📱 **[PoleBid](https://github.com/MartinMF24/PoleBid)** *(2026)*: Aplicación móvil de subastas desarrollada *end-to-end* en equipo durante 6 meses.
-* 🎓 **[ProfeRank](https://github.com/MartinMF24/ProfeRank)** *(2025)*: Plataforma web colaborativa para la calificación de profesores universitarios (desarrollo de 4 meses con **Firebase y Supabase**).
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" align="left">
+        🏁 <b>Ecosistema GrandPrix Tracker</b> <i>(2026) — Arquitectura distribuida & Microservicios</i><br/>
+        <sub>Plataforma integral para la gestión y compra de paquetes de Fórmula 1 (entradas, vuelos y alojamiento). Diseñada con un backend central en <b>Spring Boot</b>, persistencia en <b>Supabase</b>, patrones de diseño (<i>Adapter, Observer, Strategy</i>) y manejo estandarizado de errores bajo <b>RFC 9457</b>.</sub>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="32%">
+        🎟️ <a href="https://github.com/MartinMF24/microservice_ticketing_gp"><b>Microservicio de Ticketería</b></a><br/>
+        <code>Microservice</code> <code>Supabase</code> <code>Cron</code>
+      </td>
+      <td>
+        Puente de integración para la gestión de entradas de cada Gran Premio. Sincroniza el inventario disponible hacia <b>Supabase</b> mediante <i>cron jobs</i> automatizados y ejecuta validaciones sincrónicas de stock y reservas durante el <i>checkout</i>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        🧼 <a href="https://github.com/MartinMF24/Soap_Ticketing_F1"><b>Ticketera Legacy SOAP</b></a><br/>
+        <code>SOAP</code> <code>XML / WSDL</code> <code>Legacy</code>
+      </td>
+      <td>
+        Sistema externo simulado basado en protocolo <b>SOAP</b> que actúa como proveedor oficial de tickets de F1. Administra la emisión, bloqueo y validación transaccional de entradas consumidas por el microservicio de ticketería.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        ✈️ <a href="https://github.com/MartinMF24/MicroService_Booking_flights_GT"><b>Microservicio de Vuelos</b></a><br/>
+        <code>ETL</code> <code>API Integration</code> <code>Supabase</code>
+      </td>
+      <td>
+        Servicio independiente que opera como proceso <b>ETL</b> (<i>Extract, Transform, Load</i>) consumiendo APIs externas de aerolíneas para normalizar e inyectar rutas, escalas y tarifas en <b>Supabase</b> bajo demanda, evitando latencias al usuario final.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        🏨 <a href="https://github.com/MartinMF24/MicroService_Booking_hotels_GT"><b>Microservicio de Hoteles</b></a><br/>
+        <code>ETL</code> <code>API Integration</code> <code>Supabase</code>
+      </td>
+      <td>
+        Microservicio <b>ETL</b> dedicado a la extracción y actualización de disponibilidad hotelera cercana a los circuitos. Mantiene la consistencia de precios y habitaciones en la base de datos central de forma desacoplada.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
+* 🏎️ **[F1 Comparator](https://github.com/mate58/f1-comparator)** *(2026)*: Proyecto de análisis de datos, minería y *clustering* desarrollado durante 6 meses con **Python y Pandas** para predecir el rendimiento de pilotos de Fórmula 1 utilizando datasets históricos.
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" align="left">
+        📱 <b>PoleBid</b> <i>(2026) — Aplicación Móvil de Subastas en Tiempo Real (6 meses)</i><br/>
+        <sub>Desarrollo <i>end-to-end</i> en un equipo ágil de 4 personas para la gestión y participación interactiva en subastas móviles, abarcando desde el prototipado UI/UX en <b>Figma</b> hasta la arquitectura cliente-servidor y sincronización en vivo.</sub>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="32%">
+        🎨 <a href="https://github.com/ericzager0/PoleBid_FRONT"><b>PoleBid Mobile (Frontend)</b></a><br/>
+        <code>React Native</code> <code>Android Studio</code> <code>Figma</code>
+      </td>
+      <td>
+        Aplicación móvil nativa que implementa 10 pantallas interactivas diseñadas en <b>Figma</b>. Gestiona la navegación, el catálogo de lotes, el flujo de pujas en vivo y las actualizaciones dinámicas de estado para el usuario.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        ⚙️ <a href="https://github.com/ericzager0/PoleBid"><b>PoleBid Server (Backend)</b></a><br/>
+        <code>Backend API</code> <code>Supabase</code> <code>Real-Time</code>
+      </td>
+      <td>
+        Servicios de backend e infraestructura de datos apoyados en <b>Supabase</b>. Administra la lógica de negocio de las subastas, la autenticación de usuarios, el cierre de lotes y la sincronización en tiempo real de las ofertas entre clientes.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+* 🎓 **[ProfeRank](https://github.com/mate58/ProfeRank)** *(2025)*: Plataforma web colaborativa para la calificación de profesores universitarios (desarrollo de 4 meses con **Firebase y Supabase**).
 ---
 
 ### 📈 Mis Estadísticas y Rachas en GitHub
